@@ -1,0 +1,17 @@
+plugins {
+    id 'java'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation('io.micrometer:micrometer-core:1.9.2') {
+        exclude module: 'LatencyUtils'
+    }
+}
+
+test {
+    useJUnitPlatform()
+}
